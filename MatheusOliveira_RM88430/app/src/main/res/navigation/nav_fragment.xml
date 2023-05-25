@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragment"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.matheusoliveira_rm88430.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_questao01Fragment"
+            app:destination="@id/questao01Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acertouFragment"
+        android:name="com.example.matheusoliveira_rm88430.AcertouFragment"
+        android:label="AcertouFragment" >
+        <action
+            android:id="@+id/action_acertouFragment_to_questao02Fragment"
+            app:destination="@id/questao02Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errouFragment"
+        android:name="com.example.matheusoliveira_rm88430.ErrouFragment"
+        android:label="ErrouFragment" >
+        <action
+            android:id="@+id/action_errouFragment_to_questao01Fragment"
+            app:destination="@id/questao01Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questao01Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Questao01Fragment"
+        android:label="Questao01Fragment" >
+        <action
+            android:id="@+id/action_questao01Fragment_to_errouFragment"
+            app:destination="@id/errouFragment" />
+        <action
+            android:id="@+id/action_questao01Fragment_to_acertouFragment"
+            app:destination="@id/acertouFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questao02Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Questao02Fragment"
+        android:label="Questao02Fragment" >
+        <action
+            android:id="@+id/action_questao02Fragment_to_acertou2Fragment"
+            app:destination="@id/acertou2Fragment" />
+        <action
+            android:id="@+id/action_questao02Fragment_to_errou2Fragment"
+            app:destination="@id/errou2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acertou2Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Acertou2Fragment"
+        android:label="Acertou2Fragment" >
+        <action
+            android:id="@+id/action_acertou2Fragment_to_questao03Fragment"
+            app:destination="@id/questao03Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errou2Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Errou2Fragment"
+        android:label="Errou2Fragment" >
+        <action
+            android:id="@+id/action_errou2Fragment_to_questao02Fragment"
+            app:destination="@id/questao02Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questao03Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Questao03Fragment"
+        android:label="Questao03Fragment" >
+        <action
+            android:id="@+id/action_questao03Fragment_to_errou3Fragment"
+            app:destination="@id/errou3Fragment" />
+        <action
+            android:id="@+id/action_questao03Fragment_to_acertou3Fragment"
+            app:destination="@id/acertou3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acertou3Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Acertou3Fragment"
+        android:label="Acertou3Fragment" >
+        <action
+            android:id="@+id/action_acertou3Fragment_to_endFragment"
+            app:destination="@id/endFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errou3Fragment"
+        android:name="com.example.matheusoliveira_rm88430.Errou3Fragment"
+        android:label="Errou3Fragment" >
+        <action
+            android:id="@+id/action_errou3Fragment_to_questao03Fragment"
+            app:destination="@id/questao03Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.matheusoliveira_rm88430.EndFragment"
+        android:label="EndFragment" >
+        <action
+            android:id="@+id/action_endFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
